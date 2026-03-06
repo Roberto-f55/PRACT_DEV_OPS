@@ -109,7 +109,6 @@ def test_remove_expense_reduces_total():
     service.create_expense("Libro", 777, "")
     service.create_expense("Revista", 1, "")
 
-    expenses = service.total_amount()
     service.remove_expense(1)
     assert len(service.list_expenses()) == 1
     assert service.total_amount() == 1
